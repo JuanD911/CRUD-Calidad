@@ -89,7 +89,7 @@ public class monitorDAO {
     		query = connection.prepareStatement(QUERIES[2]);
     		query.setString(1, nombre);
     		query.setString(2, telefono);
-    		query.setString(3, direccion);
+    		query.setString(3,	direccion);
     		query.setString(4, correo);
     		query.setString(5, f_nacimiento);
     		query.setInt(6, id);

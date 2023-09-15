@@ -98,4 +98,29 @@ public class grupoDAO {
     			e.printStackTrace();
     		}
     }
+    
+    public Grupo ponerGrupoEnTextFields(int id) {
+    	
+    	try {
+    		
+    		query = connection.prepareStatement(QUERIES[4]);
+    		query.setInt(1, id);
+    		
+    		ResultSet response = query.executeQuery();
+    		
+    		if(response.next()) {
+    			g.setId(response.getInt("id"));
+    			g.setNombre(response.getString("nombre"));
+    		}
+    		
+    		System.out.println(query);
+    		
+    		query.executeUpdate();
+    		} catch (SQLException e) {
+    			System.out.println("Error al actualizar");
+    			e.printStackTrace();
+    		}
+    	
+    	return g;
+    }
 }

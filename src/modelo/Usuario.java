@@ -20,22 +20,6 @@ public abstract class Usuario {
 		this.direccion = direccion;
 		this.c_electronico = c_electronico;
 	}
-    
-	public void crearUsuario(){
-
-    }
-
-    public void buscarUsuario(){
-
-    }
-
-    public void actualizarUsuario(){
-
-    }
-
-    public void borrarUsuario(){
-        
-    }
 
 	public int getId() {
 		return id;
